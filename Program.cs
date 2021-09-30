@@ -7,12 +7,12 @@ namespace ProvaPoo
         //Programa que simula algumas operações simples de um Caixa Eletrônico.
         static void Main(string[] args)
         {
-            string nomeCliente; //variavel utilizada para guardar o Nome do cliente que está utilizando o programa.
-            double valorSaque; //variavel utilizada para guardar o valor que será retirado da conta do cliente.
-            double valorDeposito; //variavel utilizada para guardar o valor que será depositado na conta do cliente.
-            double saldoConta; //varialvel utilizada para guardar o valor total do saldo da conta do cliente.
-            int numeroConta; // variavel utilizada para guardar o numero da conta criado pelo usuario.
-            string escolha; //variavel utilizada para armazenar a opção escolhida pelo usuario.
+            string nomeCliente; //Guarda o nome do Usuario.
+            double valorSaque; //Guarda o valor do saque realizado pelo Usuario.
+            double valorDeposito; //Guarda o valor que será depositado pelo Usuario.
+            double saldoConta; //Guarda o valor do saldo total da conta Usuario.
+            int numeroConta; //Guarda o numero da conta cadastrado pelo Usuario. 
+            string escolha; //Guarda a opção selecionada pelo Usuario.
 
             Console.WriteLine("=== Caixa Eletrônico ===");
             Console.WriteLine();
@@ -81,7 +81,7 @@ namespace ProvaPoo
                                     {
                                         Console.WriteLine("[DEPOSITO FINALIZADO]");
                                         Console.WriteLine("---Saldo antigo R${0}---", saldoConta);
-                                        saldoConta = valorDeposito + saldoConta;
+                                        saldoConta = valorDeposito + saldoConta;//Adiciona um valor depositado na conta.
                                         Console.WriteLine("---Saldo atualizado R${0}---", saldoConta);
                                         Console.WriteLine();
                                     }
@@ -115,7 +115,7 @@ namespace ProvaPoo
                                     {
                                         Console.WriteLine("[SAQUE FINALIZADO]");
                                         Console.WriteLine("---Saldo antigo R${0}---", saldoConta);
-                                        saldoConta = saldoConta - valorSaque;
+                                        saldoConta = saldoConta - valorSaque;//Desconta um valor retirado da conta.
                                         Console.WriteLine("---Saldo atualizado R${0}---", saldoConta);
                                         Console.WriteLine();
                                     }
